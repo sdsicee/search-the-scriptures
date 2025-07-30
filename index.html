@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search The Scriptures</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: EB Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Use the EB Garamond font family */
+        body {
+            font-family: 'EB Garamond', serif;
+            /* Using the user-provided image URL */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://iili.io/FSa3sLB.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Style for blockquotes */
+        blockquote {
+            border-left: 4px solid #a16207; /* dark yellow */
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #44403c; /* stone-700 */
+        }
+        blockquote footer {
+            margin-top: 0.5rem;
+            font-style: normal;
+            font-size: 1rem; /* text-base */
+            color: #57534e; /* stone-600 */
+        }
+        /* Styles for the transition effect */
+        .content-section {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .is-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none; /* Prevent interaction when hidden */
+        }
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom parchment background color */
+        .bg-parchment {
+            background-color: #fef9c3; /* A slightly richer parchment color */
+        }
+        /* Subtle text shadow for better readability on headings */
+        .text-readable {
+             text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-stone-800">
+
+    <!-- Main Container -->
+    <div class="flex flex-col min-h-screen">
+
+        <!-- Header -->
+        <header class="bg-parchment shadow-lg border-b border-yellow-900/20">
+            <div class="container mx-auto px-6 py-4">
+                <h1 class="text-5xl font-bold text-center text-yellow-900 text-readable">Search The Scriptures</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow relative">
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                
+                <!-- This is the main content that shows on page load -->
+                <div id="main-content" class="content-section is-visible">
+                    <!-- Hero Section -->
+                    <div class="max-w-4xl mx-auto bg-parchment p-8 md:p-12 rounded-lg shadow-2xl text-center mb-16 border border-yellow-900/20">
+                        <div class="flex justify-center mb-6">
+                             <!-- Scroll Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-semibold text-yellow-900 mb-4 text-readable">Welcome to Search The Scriptures!</h2>
+                        <p class="text-xl text-stone-800 leading-relaxed">
+                            We strive on studying Scripture and providing the explanation of it in the most accurate light that we can. Search The Scriptures is a site that is dedicated primarily to the Christian, challenging our brothers and sisters along with ourselves to dive into the truth of Scripture to see if we have set aside the commands of God to set up our own traditions. To do this we use Scripture to explain Scripture. Please join us on this journey!
+                        </p>
+                        <div class="mt-8">
+                            <button id="show-podcast-btn" class="inline-block bg-yellow-800 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-yellow-900 transition-colors duration-300 border border-yellow-950 text-lg">
+                                Check out our podcast
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- The Rapture Section Intro -->
+                    <div class="max-w-4xl mx-auto bg-parchment p-8 md:p-12 rounded-lg shadow-2xl border border-yellow-900/20">
+                        <h2 class="text-4xl md:text-5xl font-semibold text-yellow-900 mb-4 text-center text-readable">The Rapture</h2>
+                        <p class="text-xl text-stone-800 leading-relaxed">
+                            I would say a majority of Christians believe in some form of a rapture: being caught up into heaven. Even though this is a popular belief it is also one of the most talked about subjects. We don't need reassurance of the virgin birth. We don't need reassurance of the divinity of Jesus. We don't need reassurance of a serpent deceiving Eve. It is the Spirit of God within us that testifies to these things (Acts 5:32). However, we need constant reassurance of a rapture. We will explore some Scriptures to discern the truth and as you read ask the Holy Spirit to bring clarity and testify to the truth.
+                        </p>
+                        <div class="mt-8 text-center">
+                            <button id="show-rapture-btn" class="inline-block bg-yellow-800 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-yellow-900 transition-colors duration-300 border border-yellow-950 text-lg">
+                                Explore the Scriptures
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This is the detailed Rapture content, hidden by default -->
+                <div id="rapture-content" class="content-section is-hidden hidden absolute top-0 left-0 w-full px-6 pt-16 md:pt-24">
+                    <article class="max-w-4xl mx-auto bg-parchment p-8 md:p-12 rounded-lg shadow-2xl border border-yellow-900/20">
+                        <div class="flex justify-between items-center mb-8">
+                            <h2 class="text-5xl font-bold text-yellow-900 text-readable">An Exploration of the Rapture</h2>
+                            <button class="hide-content-btn text-yellow-800 hover:text-yellow-900 font-semibold text-xl">← Back to Home</button>
+                        </div>
+                        
+                        <!-- Section 1: Luke 17 & Matthew 13 -->
+                        <section class="mb-8">
+                            <blockquote class="text-xl">
+                                <p>I tell you, on that night there will be two in one bed; one will be taken and the other will be left.</p>
+                                <footer>Luke 17:34 NASB</footer>
+                            </blockquote>
+                            <blockquote class="text-xl">
+                                <p>So it will be at the end of the age; the angels will come forth and take out the wicked from among the righteous,</p>
+                                <footer>Matthew 13:49 NASB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed">The Luke 17:34 verse is a popular verse that many explain is the rapture. However, if you look closely at the remainder of the chapter, it is not the righteous who are being taken, but the wicked! The disciples ask plainly, "To where"? Jesus answers by taking a prophecy from Ezekiel 39:17. The wicked will be taken away to be fed to the birds of prey.</p>
+                        </section>
+
+                        <!-- Section 2: The Last Will Be First -->
+                        <section class="mb-8">
+                            <h3 class="text-3xl font-semibold text-yellow-900 mt-12 mb-4 text-readable">The Last Will Be First</h3>
+                            <blockquote class="text-xl">
+                                <p>Then one of the twenty-four elders asked me, “Who are these who are clothed in white? Where did they come from?” And I said to him, “Sir, you are the one who knows.” Then he said to me, “These are the ones who died in the great tribulation. They have washed their robes in the blood of the Lamb and made them white.</p>
+                                <footer>Revelation 7:13-14 NLT</footer>
+                            </blockquote>
+                            <blockquote class="text-xl">
+                                <p>“For the kingdom of heaven is like a landowner who went out early in the morning to hire workers for his vineyard... So the last will be first, and the first last.”</p>
+                                <footer>Matthew 20:1-16 HCSB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed mt-4">So here we have one of the Elders speaking about those who are clothed in white. The answer is that they have died in the great tribulation and here they are standing before the throne! They have received a double honor, not only do they stand before the Lord before anyone else, they will also reign with Him for a thousand years before the rest of the dead are brought back to life and judged. They and only they are of the first resurrection! All those who died before the tribulation, the righteous and the wicked, will be raised in the second resurrection and judged according to our works. The works of these who died in the tribulation follow them (Revelation 14:13). Make no mistake that these who are dying in the tribulation are the last of the believers.</p>
+                        </section>
+                        
+                        <!-- Section 3: Revelation 20 -->
+                         <section class="mb-8">
+                            <blockquote class="text-xl">
+                                <p>Then I saw thrones, and people seated on them who were given authority to judge. I also saw the people who had been beheaded because of their testimony about Jesus and because of God’s word... They came to life and reigned with the Messiah for 1,000 years. The rest of the dead did not come to life until the 1,000 years were completed. This is the first resurrection. Blessed and holy is the one who shares in the first resurrection! The second death has no power over them, but they will be priests of God and of the Messiah, and they will reign with Him for 1,000 years.</p>
+                                <footer>Revelation 20:4-6 HCSB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed mt-4">So now we see the illustration of the last becoming the first. They come in at the end of the age, and receive their pay before anyone else! Back in the Matthew verse Jesus made sure to say, "pay them starting with the last." So now we see those who suffered in the tribulation getting their pay before the rest of us. It is they who are among the first resurrection, not any other group! Let's look further at what Jesus had to say about this particular group as opposed to the rest of the dead. First let's see what He says about these who were beheaded for their testimony:</p>
+                        </section>
+
+                        <!-- Section 4: John 5 -->
+                        <section class="mb-8">
+                            <blockquote class="text-xl">
+                                <p>“I assure you: An hour is coming, and is now here, when the dead will hear the voice of the Son of God, and those who hear will live.</p>
+                                <footer>John 5:25 HCSB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed mt-4">Here you see that He is distinctly speaking about only those who hear. This is the first resurrection. The first resurrection only belongs to those who were beheaded during the tribulation. Now let's see what He says about the second resurrection:</p>
+                            <blockquote class="text-xl">
+                                <p>Do not be amazed at this, because a time is coming when all who are in the graves will hear His voice and come out — those who have done good things, to the resurrection of life, but those who have done wicked things, to the resurrection of judgment.</p>
+                                <footer>John 5:28-29 HCSB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed mt-4">Notice the distinction here! This is the second resurrection, notice that in the second resurrection there are both the righteous and the wicked! This is when the separation of the sheep and the goats take place.</p>
+                        </section>
+
+                        <!-- Section 5: The Wheat and Weeds -->
+                        <section class="mb-8">
+                            <h3 class="text-3xl font-semibold text-yellow-900 mt-12 mb-4 text-readable">The Wicked and Righteous Waiting for the Harvest</h3>
+                            <blockquote class="text-xl">
+                                <p>He presented another parable to them: “The kingdom of heaven may be compared to a man who sowed good seed in his field... Let both grow together until the harvest. At harvest time I’ll tell the reapers: Gather the weeds first and tie them in bundles to burn them, but store the wheat in my barn.’ ”</p>
+                                <footer>Matthew 13:24-30 HCSB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed mt-4">Before we continue on to the explanation provided by Jesus, I want to point out that the first action is to gather (rapture) the weeds first! Take note that this does not happen until the end (harvest time). Also, notice the second action is to "store the wheat in my barn" (1 Thessalonians 4:17). This is the righteous being caught up to meet with the Lord in the air as He is descending to execute judgement.</p>
+                            <blockquote class="text-xl">
+                                <p>Then He dismissed the crowds and went into the house. His disciples approached Him and said, “Explain the parable of the weeds in the field to us.” He replied: “...just as the weeds are gathered and burned in the fire, so it will be at the end of the age. The Son of Man will send out His angels, and they will gather from His kingdom everything that causes sin and those guilty of lawlessness... Then the righteous will shine like the sun in their Father’s kingdom. Anyone who has ears should listen!</p>
+                                <footer>Matthew 13:36-43 HCSB</footer>
+                            </blockquote>
+                             <p class="text-xl text-stone-800 leading-relaxed mt-4">Notice that the wicked will be gathered (raptured) from His kingdom.</p>
+                        </section>
+                        
+                        <!-- Section 6: Inherit the Earth -->
+                        <section class="mb-8">
+                            <h3 class="text-3xl font-semibold text-yellow-900 mt-12 mb-4 text-readable">Thy Kingdom Come. Thy Will Be Done in Earth, as It Is in Heaven.</h3>
+                            <blockquote class="text-xl">
+                                <p>The gentle are blessed, for they will inherit the earth.</p>
+                                <footer>Matthew 5:5 HCSB</footer>
+                            </blockquote>
+                            <p class="text-xl text-stone-800 leading-relaxed mt-4">We were never meant to leave the earth. The earth is our inheritance. Just as in the time of the old testament when Israel could not inhabit the promised land until the wicked people who occupied it were removed, so we await the removal (rapture) of the wicked so that we can enjoy our inheritance. I will leave you with some scriptures to study. God Bless you, my brothers and sisters!</p>
+                        </section>
+
+                        <!-- Final Scriptures -->
+                        <section>
+                            <h3 class="text-3xl font-semibold text-yellow-900 mt-12 mb-4 text-readable">Further Study</h3>
+                            <ul class="list-disc list-inside space-y-4 text-xl text-stone-800">
+                                <li>Revelation 14:11-12 HCSB</li>
+                                <li>Psalms 37:9-11 ESV</li>
+                                <li>Job 38:12-13 HCSB</li>
+                                <li>Proverbs 10:30 HCSB</li>
+                                <li>Psalms 37:29 HCSB</li>
+                                <li>Psalms 52:5 NASB</li>
+                            </ul>
+                        </section>
+                        <div class="text-right mt-12">
+                            <button class="hide-content-btn text-yellow-800 hover:text-yellow-900 font-semibold text-xl">← Back to Home</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- This is the Podcast content, hidden by default -->
+                <div id="podcast-content" class="content-section is-hidden hidden absolute top-0 left-0 w-full px-6 pt-16 md:pt-24">
+                    <article class="max-w-4xl mx-auto bg-parchment p-8 md:p-12 rounded-lg shadow-2xl border border-yellow-900/20">
+                        <div class="flex justify-between items-center mb-8">
+                            <h2 class="text-5xl font-bold text-yellow-900 text-readable">Our Podcast</h2>
+                            <button class="hide-content-btn text-yellow-800 hover:text-yellow-900 font-semibold text-xl">← Back to Home</button>
+                        </div>
+                        <div class="w-full">
+                           <!-- Re-attempting embed with direct site URL -->
+                           <iframe style="border-radius:12px" src="https://podcasters.spotify.com/pod/show/searchthescriptures" width="100%" height="850" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                        <div class="text-right mt-12">
+                            <button class="hide-content-btn text-yellow-800 hover:text-yellow-900 font-semibold text-xl">← Back to Home</button>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-parchment shadow-inner border-t border-yellow-900/20">
+            <div class="container mx-auto px-6 py-4 text-center text-yellow-900 text-readable">
+                <p class="text-lg">&copy; 2024 Search The Scriptures. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript to toggle content visibility -->
+    <script>
+        // Get the elements
+        const mainContent = document.getElementById('main-content');
+        const raptureContent = document.getElementById('rapture-content');
+        const podcastContent = document.getElementById('podcast-content');
+        
+        const showRaptureBtn = document.getElementById('show-rapture-btn');
+        const showPodcastBtn = document.getElementById('show-podcast-btn');
+        const hideContentBtns = document.querySelectorAll('.hide-content-btn');
+
+        // Function to switch views
+        const switchView = (showElement, hideElement) => {
+            hideElement.classList.add('is-hidden');
+            hideElement.classList.remove('is-visible');
+            
+            hideElement.addEventListener('transitionend', () => {
+                if (!hideElement.classList.contains('is-visible')) {
+                    hideElement.classList.add('hidden');
+                }
+            }, { once: true });
+
+            showElement.classList.remove('hidden');
+            
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    showElement.classList.remove('is-hidden');
+                    showElement.classList.add('is-visible');
+                });
+            });
+
+            window.scrollTo(0, 0);
+        };
+
+        // Event listener to show the rapture content
+        showRaptureBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            switchView(raptureContent, mainContent);
+        });
+
+        // Event listener to show the podcast content
+        showPodcastBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            switchView(podcastContent, mainContent);
+        });
+
+        // Event listener for all "Back to Home" buttons
+        hideContentBtns.forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Determine which section is currently visible and hide it
+                if (raptureContent.classList.contains('is-visible')) {
+                    switchView(mainContent, raptureContent);
+                } else if (podcastContent.classList.contains('is-visible')) {
+                    switchView(mainContent, podcastContent);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
